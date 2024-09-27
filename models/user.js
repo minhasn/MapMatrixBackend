@@ -3,20 +3,20 @@ const client = require('../config/db');
 const bcrypt = require('bcryptjs');
 
 class User {
-  static async create({ FullName, PhoneNo, City, Password, Email, Country }) {
-    const hashedPassword = await bcrypt.hash(Password, 10);
-    const userId = uuidv4(); // Generate a new UUID
+  static async create({ name, phone_number, City, Password, email, country }) {
+    const password_hash = await bcrypt.hash(Password, 10);
+    const id = uuidv4(); // Generate a new UUID
     const result = await client.query(
-      'INSERT INTO "User" ("UserId", "FullName", "PhoneNo", "City", "Password", "Email", "Country") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
-      [userId, FullName, PhoneNo, City, hashedPassword, Email, Country]
+      'INSERT INTO "User" ("id", "name", "phone_number", "city", "password_hash", "email", "country") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
+      [id, name, phone_number	, City, password_hash, email, country,city]
     );
     return result.rows[0];
   }
 
-  static async findByPhoneNo(PhoneNo) {
+  static async findByphone_number(phone_number) {
     const result = await client.query(
-      'SELECT * FROM "User" WHERE "PhoneNo" = $1',
-      [PhoneNo]
+      'SELECT * FROM "User" WHERE "phone_number" = $1',
+      [phone_number]
     );
     return result.rows[0];
   }
