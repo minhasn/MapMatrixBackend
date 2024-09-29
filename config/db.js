@@ -2,10 +2,10 @@ const { Client } = require('pg');
 require('dotenv').config();
 
 const client = new Client({
-  user: process.env.DATABASE_USER || 'postgres',
-  password: process.env.DATABASE_PASSWORD || 'cezXrCwhVcIphKrMeIrZzpeAfXmHScUL',
+  user: process.env.DATABASE_USER || 'root',
+  password: process.env.DATABASE_PASSWORD || 'RTYtGyNSeerXbGzCjgZKAwemeDsFAvao',
   host: process.env.DATABASE_HOST || 'junction.proxy.rlwy.net',
-  port: process.env.DATABASE_PORT || 34591,
+  port: process.env.DATABASE_PORT || 10063,
   database: process.env.DATABASE_NAME || 'railway',
 });
 
