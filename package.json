@@ -1,4 +1,17 @@
 {
+  "name": "backendfinalwatermatrix",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
@@ -9,15 +22,5 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.11.3",
     "uuid": "^10.0.0"
-  },
-  "name": "railwaybackendfinal",
-  "version": "1.0.0",
-  "description": "Realstateapp",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
