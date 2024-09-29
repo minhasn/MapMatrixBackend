@@ -1,11 +1,11 @@
 {
-  "name": "backendfinalwatermatrix",
+  "name": "MapMatrixBackend",
   "version": "1.0.0",
   "description": "backend",
   "main": "server.js",
   "scripts": {
     "test": "node server",
-
+    "start": "node server"
   },
   "repository": {
     "type": "git"
