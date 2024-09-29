@@ -5,10 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "node server",
-    "start": "node server",
+    "start": "node server"
   },
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "author": "",
   "license": "ISC",
